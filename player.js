@@ -1,8 +1,8 @@
 class Player {
     constructor() {
         this.tony
-        this.x = 100
-        this.y = 550
+        this.x = 250
+        this.y = 750
         this.espresso
     }
     preload() {
@@ -25,7 +25,7 @@ class Obstacles {
         this.gun = loadImage('./images/pistola.png')
     }
     draw(){
-        image(this.gun, 90, 90, 50, 50)
+        image(this.gun, 550, 50, 60, 50)
     }
 
 }
@@ -42,8 +42,8 @@ class Prize {
         this.espresso = loadImage('./images/espresso.png')
     }
     draw(){
-        image(this.jamon, 20, 20, 50, 40)
-        image(this.espresso, 60, 60, 50, 40)
+        image(this.jamon, 25, 50, 70, 60)
+        image(this.espresso, 250, 60, 80, 40)
        
     }
 
