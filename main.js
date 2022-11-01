@@ -29,8 +29,12 @@ function keyPressed() {
 	if (keyCode === 38) {
 		game.player.moveUp()
 	}
-    
+
     if (keyCode === 40) {
 		game.player.moveDown()
 	}
 }
+
+
+// TODO: function calculatePoints() {}
+// TODO: function adjustVelocityByPoints() {}
