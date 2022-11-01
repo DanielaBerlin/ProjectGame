@@ -1,16 +1,7 @@
-
-let player = new Player()
-let obstacles = new Obstacles()
-let prize = new Prize()
-let secondprize = new Secondprize()
-
 const game = new Game()
 
 function preload () {
-    player.preload()
-    obstacles.preload()
-    prize.preload()
-    secondprize.preload()
+    game.preload()
     
 }
 
@@ -22,9 +13,24 @@ function setup() {
 
 function draw () {
     clear()
-    background(106, 92, 92)
-    player.draw()
-    obstacles.draw()
-    prize.draw()
-    secondprize.draw()
+    game.draw()
+}
+
+function keyPressed() {
+
+    if (keyCode === 39) {
+		game.player.moveRight()
+	}
+
+	if (keyCode === 37) {
+		game.player.moveLeft()
+	}
+
+	if (keyCode === 38) {
+		game.player.moveUp()
+	}
+    
+    if (keyCode === 40) {
+		game.player.moveDown()
+	}
 }

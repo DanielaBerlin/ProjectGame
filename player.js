@@ -1,39 +1,62 @@
 class Player {
     constructor() {
-        this.tony
         this.x = 250
         this.y = 750
-    }
-    preload() {
-        this.tony = loadImage('./images/tony.png')
-    }
-    draw(){
-        image(this.tony, this.x , this.y, 150, 150)
  
     }
+
+    draw(){
+        image(game.tony, this.x , this.y, 150, 150)
+
+    }
+ 
+    moveUp() {
+        if (this.y >= 100) {
+        this.y -= 100
+        }
+
+    }
+
+    moveDown() {
+        if (this.y <= 700) {
+        this.y += 100
+        }
+    }    
+
+    moveLeft() {
+        if (this.x >= 50) {
+        this.x -= 100
+        }
+    }
+
+    moveRight() {
+        if (this.x <= 550) {
+        this.x += 80
+        }
+    }
+
 
 }
 
 
 class Obstacles {
     constructor(){
-        this.gun
+        // this.x = 550
         this.x = 550
         this.y = (Math.random() * 60) / 50
+        this.width = 60
+        this.height = 50
 
     }
 
-    preload(){
-        this.gun = loadImage('./images/pistola.png')
-    }
     draw(){
+        this.y++
+        image(game.gun, this.x, this.y, this.width, this.height)
 
-        image(this.gun, this.x, this.y, 60, 50)
-
-
-        this.x += 0
-        this.y += 1
+        // this.x += 0
+        // this.y += 1
     }
+
 }
 
 class Prize {
@@ -45,11 +68,8 @@ class Prize {
 
     }
 
-    preload(){
-        this.jamon = loadImage('./images/jamon.png')
-    }
     draw(){
-        image(this.jamon, this.x, this.y, 70, 60)
+        image(game.jamon, this.x, this.y, 70, 60)
        
         this.x += 0
         this.y += 1
@@ -66,12 +86,10 @@ class Secondprize {
         this.y = (Math.random() * 60) / 50
     }
 
-    preload(){
-        this.espresso = loadImage('./images/espresso.png')
-    }
+
     draw(){
         
-        image(this.espresso, this.x, this.y, 80, 40)
+        image(game.espresso, this.x, this.y, 80, 40)
   
     this.x += 0
     this.y += 1   
