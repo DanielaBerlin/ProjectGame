@@ -4,7 +4,6 @@ class Game {
         this.secondPrize = [] 
         this.obstacles = []
         this.prize = []
-        // this.score = 0
     }
 
     preload() {

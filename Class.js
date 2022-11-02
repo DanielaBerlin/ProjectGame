@@ -15,26 +15,26 @@ class Player {
  
     moveUp() {
         if (this.y >= 100) {
-        this.y -= 100
+        this.y -= 25
         }
 
     }
 
     moveDown() {
         if (this.y <= 700) {
-        this.y += 100
+        this.y += 25
         }
     }    
 
     moveLeft() {
         if (this.x >= 50) {
-        this.x -= 100
+        this.x -= 25
         }
     }
 
     moveRight() {
         if (this.x <= 550) {
-        this.x += 80
+        this.x += 25
         }
     }
 
@@ -148,7 +148,7 @@ class Secondprize {
         // dist(x1, y1, x2, y2) returns the distance between the objects
 		if (dist(secondprizeX, secondprizeY, secondX, secondY) > 25) {
             //game.player.score++
-            
+
 			return false
 
 		} else {
