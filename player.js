@@ -41,9 +41,8 @@ class Player {
 
 class Obstacles {
     constructor(){
-        // this.x = 550
-        this.x = 550
-        this.y = (Math.random() * 60) / 50
+        this.x = (Math.random() * height) 
+        this.y = 0
         this.width = 60
         this.height = 50
         this.velocity = 1
@@ -51,16 +50,13 @@ class Obstacles {
     }
 
     draw(){
-        // this.y++
+        this.y++
         this.y += this.velocity
         image(game.gun, this.x, this.y, this.width, this.height)
 
-        // this.x += 0
-        // this.y += 1
     }
 
     collision(playerInfo) {
-		// console.log("collision")
 
 		// Get the middle of the obstacle
 		let obstacleX = this.x + this.width / 2
