@@ -7,4 +7,22 @@ body {
     background-color: rgb(16, 11, 11)
 }
 
+.text-white {
+    color: white
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.mx-50 {
+    margin: 0px 50px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
 
