@@ -22,13 +22,29 @@ class Game {
 
 		this.obstacles.forEach((obstacle) => {
 			obstacle.draw()
-         //   if (obstacle.collision(this.player)) {
-                // obstacle.velocity = -5
-                // noLoop()
-                // textSize(32)
-                // text("You won! ;)", 300, 300)
-          //  }
-		})		
+        })
+        this.obstacles = this.obstacles.filter(obstacle => {
+            if (!obstacle.collision(this.player)) {
+                if (game.player.score ===0){
+                    noLoop()
+                    textSize(32)
+                    text("You death", 300, 300)
+                } else {
+                    return false
+                }
+            } else {
+                return true
+            }
+        })
+        //    if (!obstacle.collision(this.player)) {
+        //     console.log("colission")
+        //         obstacle.velocity = 1
+        //         console.log("SCORE:", this.player)
+        //         // noLoop()
+        //         textSize(32)
+        //         text("You death", 300, 300)
+        //    }
+		// })		
         
         console.log(this.prize.length)
          if (frameCount % 50 === 0) {

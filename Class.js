@@ -2,11 +2,13 @@ class Player {
     constructor() {
         this.x = 250
         this.y = 750
- 
+        this.width = 150
+        this.height = 150
+        this.score = 3
     }
 
     draw(){
-        image(game.tony, this.x , this.y, 150, 150)
+        image(game.tony, this.x , this.y, this.width, this.height)
 
     }
  
@@ -56,7 +58,27 @@ class Obstacles {
 
     }
 
+    collision(playerInfo) {
+
+		let obstacleX = this.x + this.width / 2
+		let obstacleY = this.y + this.height / 2
+
+		// Get the middle of the player
+		let playerX = playerInfo.x + playerInfo.width / 2
+		let playerY = playerInfo.y + playerInfo.height / 2
+		
+        // dist(x1, y1, x2, y2) returns the distance between the objects
+		if (dist(obstacleX, obstacleY, playerX, playerY) < 25) {
+            game.player.score--
+            console.log(game.player.score)
+			return false
+		} else {
+			return true
+		}
+
+    }
 }
+
 
 class Prize {
     constructor(){
@@ -77,6 +99,28 @@ class Prize {
     
     }
 
+    collision(playerInfo) {
+
+		let obstacleX = this.x + this.width / 2
+		let obstacleY = this.y + this.height / 2
+
+		// Get the middle of the player
+		let playerX = playerInfo.x + playerInfo.width / 2
+		let playerY = playerInfo.y + playerInfo.height / 2
+		
+        // dist(x1, y1, x2, y2) returns the distance between the objects
+		if (dist(obstacleX, obstacleY, playerX, playerY) < 25) {
+            game.player.score++
+            console.log("this is score", game.player.score)
+			return false
+
+		} else {
+			// Increment the score
+			
+			return true
+		}
+
+}
 }
 
 
