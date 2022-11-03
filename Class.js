@@ -27,13 +27,13 @@ class Player {
     }    
 
     moveLeft() {
-        if (this.x >= 50) {
+        if (this.x >= 0) {
         this.x -= 25
         }
     }
 
     moveRight() {
-        if (this.x <= 550) {
+        if (this.x <= 570) {
         this.x += 25
         }
     }
@@ -65,11 +65,9 @@ class Obstacles {
 		let obstacleX = this.x + this.width / 2
 		let obstacleY = this.y + this.height / 2
 
-		// Get the middle of the player
 		let playerX = playerInfo.x + playerInfo.width / 2
 		let playerY = playerInfo.y + playerInfo.height / 2
 		
-        // dist(x1, y1, x2, y2) returns the distance between the objects
 		if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
             game.player.life--
 			return false

@@ -11,6 +11,8 @@ class Game {
         this.gun = loadImage('./images/pistola.png')
         this.espresso = loadImage('./images/espresso.png')
         this.jamon = loadImage('./images/jamon.png')
+        this.sad = loadImage('./images/sad.gif')
+        this.happy = loadImage('./images/celebrating.gif')
     }
 
     draw() {
@@ -31,8 +33,9 @@ class Game {
                 
                 if (game.player.life ===0){
                     noLoop()
-                    textSize(32)
-                    text("You death", 300, 300)
+                    textSize(50)
+                    text("You died", 250, 200)
+                    image(this.sad, 200, 300, 300, 300)
                 } else {
                     return false
                 }
@@ -52,8 +55,9 @@ class Game {
               if (prize.collision(this.player)) {
                 if (game.player.score >= 50){
                     noLoop()
-                    textSize(32)
-                    text("You win", 300, 300)
+                    textSize(50)
+                    text("You win", 250, 200)
+                    image(this.happy, 200, 300, 300, 300)
                     } else {
                       this.player.score += 10
                       document.querySelector(".score span").innerHTML = this.player.score
@@ -79,6 +83,7 @@ class Game {
                           noLoop()
                           textSize(32)
                           text("You win", 300, 300)
+                          image(this.happy, 200, 300, 300, 300)
                           } else {
                             this.player.score += 5
                             document.querySelector(".score span").innerHTML = this.player.score

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+*{
+    font-family: 'Special Elite', cursive;
+
+}
+body {
+    background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    background: rgb(181, 133, 12);
+    padding: 10px  20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 50px red;
+    text-decoration: none;
+}
+
+  
+
+
+  
+  
+  
+ 
+
+  
+
+  
+
+  
+
+  
+
+
+
