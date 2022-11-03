@@ -15,8 +15,10 @@ class Game {
 
     draw() {
         background(106, 92, 92)
+        stroke(255, 204, 0);
+        strokeWeight(4);
         this.player.draw()
-		if (frameCount % 50 === 0) {
+		if (frameCount % 20 === 0) {
 			this.obstacles.push(new Obstacles(this.gun))
 		}
 
@@ -39,7 +41,7 @@ class Game {
             }
         })	
         
-        if (frameCount % 50 === 0) {
+        if (frameCount % 200 === 0) {
 		this.prize.push(new Prize())
 		 }
 
@@ -53,7 +55,7 @@ class Game {
                     textSize(32)
                     text("You win", 300, 300)
                     } else {
-                      this.player.score += 5
+                      this.player.score += 10
                       document.querySelector(".score span").innerHTML = this.player.score
                       console.log(this.player.score)
                         return false
@@ -64,7 +66,7 @@ class Game {
 		  })
 
 
-        if (frameCount % 50 === 0) {
+        if (frameCount % 150 === 0) {
 		this.secondPrize.push(new Secondprize())
 		 }
 
@@ -78,7 +80,7 @@ class Game {
                           textSize(32)
                           text("You win", 300, 300)
                           } else {
-                            this.player.score += 10
+                            this.player.score += 5
                             document.querySelector(".score span").innerHTML = this.player.score
                             console.log(this.player.score)
                               return false

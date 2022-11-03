@@ -15,14 +15,14 @@ class Player {
  
     moveUp() {
         if (this.y >= 100) {
-        this.y -= 25
+        this.y -= 40
         }
 
     }
 
     moveDown() {
         if (this.y <= 700) {
-        this.y += 25
+        this.y += 40
         }
     }    
 
@@ -70,7 +70,7 @@ class Obstacles {
 		let playerY = playerInfo.y + playerInfo.height / 2
 		
         // dist(x1, y1, x2, y2) returns the distance between the objects
-		if (dist(obstacleX, obstacleY, playerX, playerY) < 25) {
+		if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
             game.player.life--
 			return false
 		} else {
@@ -104,12 +104,10 @@ class Prize {
 		let prizePlayerX = this.x + this.width / 2
 		let prizePlayerY = this.y + this.height / 2
 
-		// Get the middle of the player
 		let prizeX = prizePlayer.x + prizePlayer.width / 2
 		let prizeY = prizePlayer.y + prizePlayer.height / 2
 		
-        // dist(x1, y1, x2, y2) returns the distance between the objects
-		if (dist(prizePlayerX, prizePlayerY, prizeX, prizeY) > 25) {
+		if (dist(prizePlayerX, prizePlayerY, prizeX, prizeY) > 50) {
 
 			return false
 		} else {
@@ -132,8 +130,6 @@ class Secondprize {
     draw() {
         this.y += this.velocity
         image(game.espresso, this.x, this.y, this.width, this.height)
-        // this.x += 0
-        // this.y += 1
     }
 
     collision(secondprize) {
@@ -141,13 +137,10 @@ class Secondprize {
 		let secondprizeX = this.x + this.width / 2
 		let secondprizeY = this.y + this.height / 2
 
-		// Get the middle of the player
 		let secondX = secondprize.x + secondprize.width / 2
 		let secondY = secondprize.y + secondprize.height / 2
 		
-        // dist(x1, y1, x2, y2) returns the distance between the objects
-		if (dist(secondprizeX, secondprizeY, secondX, secondY) > 25) {
-            //game.player.score++
+		if (dist(secondprizeX, secondprizeY, secondX, secondY) > 50) {
 
 			return false
 
