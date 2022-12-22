@@ -81,7 +81,7 @@ class Obstacles {
 
 class Prize {
     constructor(){
-        this.jamon
+        this.sandwich
         this.x = (Math.random() * height) 
         this.y = 0
         this.width = 70
@@ -93,7 +93,7 @@ class Prize {
     draw(){
 
         this.y += this.velocity
-        image(game.jamon, this.x, this.y, this.width, this.height)
+        image(game.sandwich, this.x, this.y, this.width, this.height)
     
     }
 

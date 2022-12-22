@@ -8,17 +8,15 @@ class Game {
 
     preload() {
         this.tony = loadImage('./images/tony.png')
-        this.gun = loadImage('./images/pistola.png')
+        this.gun = loadImage('./images/gun.png')
         this.espresso = loadImage('./images/espresso.png')
-        this.jamon = loadImage('./images/jamon.png')
+        this.sandwich = loadImage('./images/sandwich.png')
         this.sad = loadImage('./images/sad.gif')
         this.happy = loadImage('./images/celebrating.gif')
     }
 
     draw() {
         background(106, 92, 92)
-        stroke(255, 204, 0);
-        strokeWeight(4);
         this.player.draw()
 		if (frameCount % 20 === 0) {
 			this.obstacles.push(new Obstacles(this.gun))

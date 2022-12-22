@@ -35,5 +35,3 @@ function keyPressed() {
 }
 
 
-// TODO: function calculatePoints() {}
-// TODO: function adjustVelocityByPoints() {}
